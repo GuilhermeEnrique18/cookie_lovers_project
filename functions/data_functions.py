@@ -1,9 +1,9 @@
 import pandas as pd
-
+# Conexão com a planilha Excel
 excel_path = "../data/Base_de_vendas_COOKIE.xlsx"
 sheets = pd.read_excel(excel_path, sheet_name=None)
 
-# Criacao dos DataFrames
+# Criacao dos DataFrames  
 df_cliente = sheets["tb_cliente"].copy()
 df_venda = sheets["tb_venda"].copy()
 df_produto = sheets["tb_produto"].copy()

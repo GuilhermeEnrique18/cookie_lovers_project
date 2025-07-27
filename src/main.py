@@ -15,7 +15,7 @@ port = "5432"
 database = "cookiedb"
 
 # Criação da engine de conexão
-engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{database}")
+engine = create_engine(f"postgresql://{user:{password}@{host}:{port}/{database}")
 
 if __name__ == "__main__":
     # ETL: E:
@@ -182,6 +182,3 @@ if __name__ == "__main__":
     df_feedback_produto.to_sql("feedback_produto", engine, if_exists="replace", index=False)
 
     print("Todas as tabelas foram recriadas e os dados inseridos com sucesso no PostgreSQL.")
-
-    print(df_total_customers_by_sex)
-    print(df_cliente["sexo"].value_counts())
